@@ -45,12 +45,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "control"], "r", lazy.restart()),
 
     ([mod, "control"], "q", lazy.shutdown()),
-    ([mod], "r", lazy.spawncmd()),
 
     # ------------ App Configs ------------
 
     # Menu
     ([mod], "m", lazy.spawn("rofi -show drun")),
+
+    #Ranger
+    ([mod], "r", lazy.spawn("alacritty -e ranger")),
 
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
@@ -66,7 +68,6 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "Return", lazy.spawn("alacritty")),
 
     # Redshift
-    ([mod], "r", lazy.spawn("redshift -O 2400")),
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
