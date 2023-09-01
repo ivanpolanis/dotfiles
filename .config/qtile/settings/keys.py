@@ -10,6 +10,9 @@ from libqtile.command import lazy
 
 mod = "mod4"
 
+def go_to_group(qtile, index):
+    qtile.current_group.use_layout(index)
+
 keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Window Configs ------------
 
@@ -33,6 +36,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Toggle between different layouts as defined below
     ([mod], "Tab", lazy.next_layout()),
     ([mod, "shift"], "Tab", lazy.prev_layout()),
+    ([mod, "shift"], "o", lazy.function(go_to_group, 5)),
 
     # Kill window
     ([mod], "w", lazy.window.kill()),
