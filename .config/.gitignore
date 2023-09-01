@@ -15,9 +15,8 @@
 !spectrwm
 !openbox
 !tint2
-!xmobar
-!dwm
-!dwmblocks
 !xmonad
 !xob
 !bat
+!tmux
+!picom

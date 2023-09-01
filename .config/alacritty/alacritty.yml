@@ -37,7 +37,7 @@ font:
     # family: Hurmit Nerd Font Mono
     # family: DaddyTimeMono Nerd Font
     # family: Iosevka NF
-    family: Hack NF
+    family: Hack Nerd Font
     # family: SpaceMono NF
   italic:
     #family: UbuntuMono Nerd Font
@@ -48,7 +48,7 @@ font:
     # family: Hurmit Nerd Font Mono
     # family: DaddyTimeMono Nerd Font
     # family: Iosevka NF
-    family: Hack NF
+    family: Hack Nerd Font
     # family: SpaceMono NF
   normal:
     #family: UbuntuMono Nerd Font
@@ -59,7 +59,7 @@ font:
     # family: Hurmit Nerd Font Mono
     # family: DaddyTimeMono Nerd Font
     # family: Iosevka NF
-    family: Hack NF
+    family: Hack Nerd Font
     # family: SpaceMono NF
     style: Regular
   size: 10
