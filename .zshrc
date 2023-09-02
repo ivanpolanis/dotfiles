@@ -1,6 +1,5 @@
 #Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
-export CLASSPATH='~/Documents/hello'
 
 # Enable Powerlevel10k instant prompt. Should stay at the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -14,9 +13,6 @@ promptinit
 prompt adam1
 
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -71,32 +67,6 @@ alias gcb='git checkout -b'
 alias gcm='git checkout master'
 alias gcl='git clone'
 alias gpl='git pull'
-
-alias mips="wine ~/Documents/winmips64.exe &"
-
-alias code="code-insiders"
-
-alias rinfo='java -jar ~/Desktop/r-Info.2.9.2.jar'
-
-alias cdt='code ~/Documents/I104-TallerDeLenguajesI'
-
-alias cdp='code ~/Documents/I103-ProgramacionIII'
-
-alias cdc='code ~/Documents/I105-CAC'
-mycommand() {
-  # Establecer el directorio donde se encuentra la aplicación
-  APP_DIR=$(pwd)
-
-  # Obtener el nombre del archivo a ejecutar del primer parámetro
-  APP_FILE="$APP_DIR/$1"
-
-  # Eliminar el primer parámetro de la lista de argumentos
-  shift
-
-  # Ejecutar el programa con los argumentos restantes
-  /usr/bin/env /usr/lib/jvm/java-19-openjdk/bin/java --enable-preview -XX:+ShowCodeDetailsInExceptionMessages -cp /home/ivan/.config/Code/User/workspaceStorage/088081997fc71bf2416ec4ae68ea66b4/redhat.java/jdt_ws/Ejemplo_db7993a7/bin "$APP_FILE" "$@"
-}
-
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
