@@ -1,31 +1,56 @@
-
 colors:
-  # Default colors
-  primary:
-    background: '0x212121'
-    foreground: '0xc5c9de'
+    primary:
+        background: "0x24283b"
+        foreground: "0xa9b1d6"
 
-  # Normal colors
-  normal:
-    black:   '0x181a29'
-    red:     '0xF07178'
-    green:   '0xcdea9f'
-    yellow:  '0xffd47e'
-    blue:    '0x93bbff'
-    magenta: '0xd3a7ee'
-    cyan:    '0x98e4ff'
-    white:   '0xbfd5de'
+    # Normal colors
+    normal:
+        black: "0x32344a"
+        red: "0xf7768e"
+        green: "0x9ece6a"
+        yellow: "0xe0af68"
+        blue: "0x7aa2f7"
+        magenta: "0xad8ee6"
+        cyan: "0x449dab"
+        white: "0x9699a8"
 
-  # Bright colors
-  bright:
-    black:   '0x282a40'
-    red:     '0xeb7f84'
-    green:   '0xe0ffad'
-    yellow:  '0xffee7e'
-    blue:    '0xa3c5ff'
-    magenta: '0xd6afed'
-    cyan:    '0x98fffd'
-    white:   '0xd1e5ed'
+    # Bright colors
+    bright:
+        black: "0x444b6a"
+        red: "0xff7a93"
+        green: "0xb9f27c"
+        yellow: "0xff9e64"
+        blue: "0x7da6ff"
+        magenta: "0xbb9af7"
+        cyan: "0x0db9d7"
+        white: "0xacb0d0"
+# colors:
+#   # Default colors
+#   primary:
+#     background: '0x212121'
+#     foreground: '0xc5c9de'
+#
+#   # Normal colors
+#   normal:
+#     black:   '0x181a29'
+#     red:     '0xF07178'
+#     green:   '0xcdea9f'
+#     yellow:  '0xffd47e'
+#     blue:    '0x93bbff'
+#     magenta: '0xd3a7ee'
+#     cyan:    '0x98e4ff'
+#     white:   '0xbfd5de'
+#
+#   # Bright colors
+#   bright:
+#     black:   '0x282a40'
+#     red:     '0xeb7f84'
+#     green:   '0xe0ffad'
+#     yellow:  '0xffee7e'
+#     blue:    '0xa3c5ff'
+#     magenta: '0xd6afed'
+#     cyan:    '0x98fffd'
+#     white:   '0xd1e5ed'
 
 font:
   bold:
