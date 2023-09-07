@@ -6,4 +6,4 @@ volumeicon &
 
 picom &
 
-feh --bg-scale ~/.local/wallpapers/1.jpg
+feh --bg-scale ~/.local/wallpapers/2.jpg
