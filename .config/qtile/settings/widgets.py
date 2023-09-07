@@ -57,7 +57,7 @@ def workspaces():
             disable_drag=True
         ),
         separator(),
-        widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
+        widget.WindowName(**base(fg='focus'), fontsize=12, padding=5),
         separator(),
     ]
 
@@ -71,17 +71,17 @@ primary_widgets = [
 
     widget.Net(**base(bg='color3'), interface='enp5s0'),
 
-    powerline('color2', 'color3'),
+    powerline('color1', 'color3'),
 
-    widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
+    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
-    widget.CurrentLayout(**base(bg='color2'), padding=5),
+    widget.CurrentLayout(**base(bg='color1'), padding=5),
 
-    powerline('color1', 'color2'),
+    powerline('color2', 'color1'),
 
-    icon(bg="color1", fontsize=17, text='󰃰 '), # Icon: nf-mdi-calendar_clock
+    # icon(bg="color1", fontsize=17, text='󰃰 '), # Icon: nf-mdi-calendar_clock
 
-    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+    widget.Clock(**base(bg='color2'), format='%A, %B %d - %H:%M'),
 
     powerline('light', 'color1'),
 
@@ -107,7 +107,7 @@ secondary_widgets = [
 ]
 
 widget_defaults = {
-    'font': 'UbuntuMono Nerd Font Bold',
+    'font': 'UbuntuMono Nerd Font',
     'fontsize': 14,
     'padding': 1,
 }
