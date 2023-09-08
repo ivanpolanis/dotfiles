@@ -68,3 +68,7 @@ p,jq
 p,rustup
 p,tmux
 p,firefox
+p,noto-fonts-cjk
+p,noto-fonts-emoji
+a,ttf-symbola
+a,ttf-twemoji
