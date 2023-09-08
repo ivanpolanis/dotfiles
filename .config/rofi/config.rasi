@@ -130,4 +130,5 @@ configuration {
 	kb-element-prev : "Super+asterisk";
 }
 //@theme "onedark"@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
-@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+//@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "./themes/tokyonight.rasi"
