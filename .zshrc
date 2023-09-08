@@ -68,6 +68,8 @@ alias gcm='git checkout master'
 alias gcl='git clone'
 alias gpl='git pull'
 
+alias wifi='nmcli --ask dev wifi connect'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
