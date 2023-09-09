@@ -50,6 +50,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     ([mod, "control"], "q", lazy.shutdown()),
 
+    ([mod, "shift"], "l", lazy.spawn("betterlockscreen -l")),
+
+
     # ------------ App Configs ------------
 
     # Menu

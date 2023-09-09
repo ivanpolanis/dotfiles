@@ -219,14 +219,14 @@ primary_widgets = [
         widget.Spacer(),
         widget.TextBox(
             text=" ",
-            foreground=colors[12],
+            foreground=colors[1],
             background=colors[0],
             # fontsize=38,
             font="Font Awesome 6 Free Solid",
         ),
         widget.WindowName(
             background=colors[0],
-            foreground=colors[12],
+            foreground=colors[1],
             width=bar.CALCULATED,
             empty_group_string="Desktop",
             max_chars=92,
