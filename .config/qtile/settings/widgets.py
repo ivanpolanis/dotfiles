@@ -321,13 +321,13 @@ primary_widgets = [
         widget.TextBox(
             text=" ",
             font="Font Awesome 6 Free Solid",
-            foreground=colors[5],  # fontsize=38
+            foreground=colors[6],  # fontsize=38
             background=colors[14],
         ),
         widget.Clock(
             format="%a, %b %d",
             background=colors[14],
-            foreground=colors[5],
+            foreground=colors[6],
         ),
         widget.TextBox(
             text="",
