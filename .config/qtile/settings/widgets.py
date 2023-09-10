@@ -290,12 +290,10 @@ primary_widgets = [
             foreground=colors[7],  # fontsize=38
             background=colors[14],
         ),
-        widget.Net(
-            interface="enp5s0",
-            format="{down} ↓↑ {up}",
+        widget.Memory(
+            measure_mem="M",
             foreground=colors[7],
             background=colors[14],
-            prefix="k",
             padding=5,
         ),
         widget.TextBox(
