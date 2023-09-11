@@ -264,9 +264,17 @@ primary_widgets = [
             limit_max_volume="True",
             mouse_callbacks={"Button3": open_pavu},
         ),
-        widget.UPowerWidget(
-             foreground=colors[8],
+        widget.BatteryIcon(
+            theme_path='~/.config/qtile/assets/battery/',
+            foreground=colors[8],
             background=colors[14],
+            scale=0.9,
+        ),
+        widget.Battery(
+            foreground=colors[8],
+            background=colors[14],
+            format='{percent:2.0%}',
+            fontsize=13,
         ),
         widget.TextBox(
             text="",
