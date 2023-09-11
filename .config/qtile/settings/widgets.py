@@ -20,6 +20,8 @@ from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
 from qtile_extras.widget.decorations import RectDecoration
 
+laptop=0
+
 # colors = [
 #     ["#2e3440", "#2e3440"],  # 0 background
 #     ["#d8dee9", "#d8dee9"],  # 1 foreground
@@ -191,31 +193,6 @@ primary_widgets = [
             padding=10,
             size_percent=50,
         ),
-        # widget.TextBox(
-        #     text="",
-        #     foreground=colors[14],
-        #     background=colors[0],
-        #     fontsize=18,
-        #     padding=0,
-        # ),
-        # widget.GenPollText(
-        #     func=dunst,
-        #     update_interval=1,
-        #     foreground=colors[11],
-        #     background=colors[14],
-        #     padding=8,
-        #     mouse_callbacks={
-        #         "Button1": toggle_dunst,
-        #         "Button3": toggle_notif_center,
-        #     },
-        # ),
-        # widget.TextBox(
-        #     text="",
-        #     foreground=colors[14],
-        #     background=colors[0],
-        #     fontsize=18,
-        #     padding=0,
-        # ),
         widget.Spacer(),
         widget.TextBox(
             text=" ",
@@ -263,18 +240,6 @@ primary_widgets = [
             background=colors[14],
             limit_max_volume="True",
             mouse_callbacks={"Button3": open_pavu},
-        ),
-        widget.BatteryIcon(
-            theme_path='~/.config/qtile/assets/battery/',
-            foreground=colors[8],
-            background=colors[14],
-            scale=0.9,
-        ),
-        widget.Battery(
-            foreground=colors[8],
-            background=colors[14],
-            format='{percent:2.0%}',
-            fontsize=13,
         ),
         widget.TextBox(
             text="",
@@ -387,3 +352,21 @@ primary_widgets = [
         ),
 ]
 
+conditional_widgets = [
+    widget.BatteryIcon(
+        theme_path='~/.config/qtile/assets/battery/',
+        foreground=colors[8],
+        background=colors[14],
+        scale=0.9,
+    ),
+    widget.Battery(
+        foreground=colors[8],
+        background=colors[14],
+        format='{percent:2.0%}',
+        fontsize=13,
+    ),
+]
+
+position_to_insert = 19
+if laptop==1:
+    primary_widgets[position_to_insert:position_to_insert] = conditional_widgets
