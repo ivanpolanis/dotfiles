@@ -264,6 +264,10 @@ primary_widgets = [
             limit_max_volume="True",
             mouse_callbacks={"Button3": open_pavu},
         ),
+        widget.UPowerWidget(
+             foreground=colors[8],
+            background=colors[14],
+        ),
         widget.TextBox(
             text="",
             foreground=colors[14],
