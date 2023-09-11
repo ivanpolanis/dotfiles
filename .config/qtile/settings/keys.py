@@ -40,6 +40,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Kill window
     ([mod], "w", lazy.window.kill()),
+    ([mod, "shift"], "w", lazy.spawn("tmux kill-server")),
 
     # Switch focus of monitors
     ([mod], "period", lazy.next_screen()),
@@ -82,6 +83,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Spotify
     ([mod], "p", lazy.spawn("spotify-launcher")),
+
+    # Zathura
+
+    ([mod], "o", lazy.spawn("zathura")),
 
     # ------------ Hardware Configs ------------
 
