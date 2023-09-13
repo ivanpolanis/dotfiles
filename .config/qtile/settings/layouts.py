@@ -1,12 +1,12 @@
 from libqtile import layout
 from libqtile.config import Match
-from .theme import colors
+from .pallete import colors
 
 # Layouts and layout rules
 
 
 layout_conf = {
-    'border_focus': colors['focus'][0],
+    'border_focus': colors[9],
     'border_width': 1,
     'margin': 4
 }
@@ -35,5 +35,5 @@ floating_layout = layout.Floating(
         Match(title='branchdialog'),
         Match(title='pinentry'),
     ],
-    border_focus=colors["color4"][0]
+    border_focus=colors[9]
 )
