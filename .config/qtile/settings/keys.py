@@ -55,7 +55,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.cmd_spawn(launcher)),
+    ([mod], "m", lazy.spawn(launcher)),
 
     #Ranger
     ([mod], "r", lazy.spawn("alacritty -e ranger")),

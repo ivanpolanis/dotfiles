@@ -53,4 +53,4 @@ catppuccin = [
 ]
 
 
-colors = catppuccin
+colors = tokyonight
