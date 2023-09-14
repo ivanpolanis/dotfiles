@@ -34,4 +34,4 @@ nord = [
     ["#242831", "#242831"],  # 14 super dark background
 ]
 
-colors = tokyonight
+colors = nord
