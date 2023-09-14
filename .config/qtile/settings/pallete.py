@@ -16,7 +16,7 @@ tokyonight = [
     ["#1a1b26", "#1a1b26"],  # 14 super dark background
 ]
 
-other = [
+nord = [
     ["#2e3440", "#2e3440"],  # 0 background
     ["#d8dee9", "#d8dee9"],  # 1 foreground
     ["#3b4252", "#3b4252"],  # 2 background lighter

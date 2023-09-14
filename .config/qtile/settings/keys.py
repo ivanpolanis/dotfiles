@@ -3,8 +3,7 @@
 from libqtile.config import Key
 from libqtile.command import lazy
 
-
-mod = "mod4"
+from .prefs import *
 
 def go_to_group(qtile, index):
     qtile.current_group.use_layout(index)
@@ -53,7 +52,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "m", lazy.spawn(launcher)),
 
     #Ranger
     ([mod], "r", lazy.spawn("alacritty -e ranger")),
@@ -62,27 +61,27 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
 
     # Browser
-    ([mod], "b", lazy.spawn("firefox")),
-    ([mod, "shift"], "b", lazy.spawn("librewolf")),
+    ([mod], "b", lazy.spawn(browser)),
+    ([mod, "shift"], "b", lazy.spawn(private)),
 
     # File Explorer
-    ([mod], "e", lazy.spawn("pcmanfm")),
+    ([mod], "e", lazy.spawn(file_manager)),
 
     # Terminal
-    ([mod], "Return", lazy.spawn("alacritty")),
+    ([mod], "Return", lazy.spawn(terminal)),
 
     # Redshift
     ([mod, "shift"], "r", lazy.spawn("redshift -x")),
 
     # Screenshot
-    ([mod, "shift"], "s", lazy.spawn("scrot --select --line mode=edge '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'")),
+    ([mod, "shift"], "s", lazy.spawn(screenshot)),
 
     # Spotify
     ([mod], "p", lazy.spawn("spotify-launcher")),
 
     # Zathura
 
-    ([mod], "o", lazy.spawn("zathura")),
+    ([mod], "o", lazy.spawn(pdf_viewer)),
 
     # ------------ Hardware Configs ------------
 

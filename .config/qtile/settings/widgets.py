@@ -41,7 +41,7 @@ extension_defaults = widget_defaults.copy()
 group_box_settings = {
     "padding": 5,
     "borderwidth": 4,
-    "active": colors[9],
+    "active": colors[0],
     "inactive": colors[10],
     "disable_drag": True,
     "rounded": True,
