@@ -43,6 +43,8 @@ p,zsh-syntax-highlighting
 p,spotify-launcher
 p,man
 p,fzf
+p,xclip
+p,xdotools
 p,xorg-server
 p,xorg-xinit
 p,xorg-xmodmap
@@ -59,7 +61,6 @@ p,python-requests
 p,lm_sensors
 p,gparted
 p,ntfs-3g
-p,xclip
 p,zathura
 p,zathura-pdf-poppler
 p,zathura-ps
