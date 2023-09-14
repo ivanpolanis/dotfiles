@@ -48,11 +48,14 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     ([mod, "shift"], "l", lazy.spawn("betterlockscreen -l")),
 
+    # Change theme
+    ([mod, "control"], "t", lazy.spawn(change_theme)),
+
 
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn(launcher)),
+    ([mod], "m", lazy.cmd_spawn(launcher)),
 
     #Ranger
     ([mod], "r", lazy.spawn("alacritty -e ranger")),
