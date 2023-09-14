@@ -3,10 +3,12 @@
 # Themes avaible
 tokyo="tokyonight"
 nord="nord"
+catppuccin="catppuccin"
 
 # Get answer from user via rofi
 selected_option=$(echo "$tokyo
-$nord" | rofi -dmenu -i -p "Themes" \
+$nord
+$catppuccin" | rofi -dmenu -i -p "Themes" \
   -config "~/.config/rofi/powermenu.rasi" \
   -width "10" \
   -lines 2 -line-margin 3 -line-padding 10 -scrollbar-width "0")
@@ -36,6 +38,17 @@ elif [ "$selected_option" == "$nord" ]; then
   fi
   if [ -e $alacritty_dir ]; then
     cp -f "$alacritty_dir/themes/nord.yml" "$alacritty_dir/alacritty.yml"
+  fi
+  xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
+elif [ "$selected_option" == "$catppuccin" ]; then
+  sed -i "\$s/.*/colors = $catppuccin/" "$HOME/.config/qtile/settings/pallete.py"
+  sed -i '$s/.*/vim.cmd [[colorscheme catppuccin-mocha]]/' "$nvim_config_file"
+  if [ -e $tmux_dir ]; then
+    cp -f "$tmux_dir/themes/catppuccin.conf" "$tmux_dir/tmux.conf"
+    tmux source "$tmux_dir/tmux.conf"
+  fi
+  if [ -e $alacritty_dir ]; then
+    cp -f "$alacritty_dir/themes/catppuccin.yml" "$alacritty_dir/alacritty.yml"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 else

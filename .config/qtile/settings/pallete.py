@@ -34,4 +34,23 @@ nord = [
     ["#242831", "#242831"],  # 14 super dark background
 ]
 
-colors = nord
+catppuccin = [
+    ["#1E1E2E", "#1E1E2E"],  # 0 background
+    ["#CDD6F4", "#CDD6F4"],  # 1 foreground
+    ["#1E1E2E", "#1E1E2E"],  # 2 background lighter
+    ["#F38BA8", "#F38BA8"],  # 3 red
+    ["#A6E3A1", "#A6E3A1"],  # 4 green
+    ["#F9E2AF", "#F9E2AF"],  # 5 yellow
+    ["#89B4FA", "#89B4FA"],  # 6 blue
+    ["#F5C2E7", "#F5C2E7"],  # 7 magenta
+    ["#94E2D5", "#94E2D5"],  # 8 cyan
+    ["#BAC2DE", "#BAC2DE"],  # 9 white
+    ["#45475A", "#45475A"],  # 10 black
+    ["#F38BA8", "#F38BA8"],  # 11 red (bright)
+    ["#A6E3A1", "#A6E3A1"],  # 12 green (bright)
+    ["#F9E2AF", "#F9E2AF"],  # 13 yellow (bright)
+    ["#171724", "#171724"],  # 14 blue (bright)
+]
+
+
+colors = catppuccin
