@@ -1,0 +1,151 @@
+
+// Nord
+* {
+  bg: #2e3440;
+  bg-selected: #4c566a;
+  bg-alt: #3b4252;
+
+  fg: #d8dee9;
+  fg-alt: #a5abb6;
+
+  accent: #88c0d0;
+
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+// Gruvbox
+/* * {
+  bg: #282828;
+  bg-selected: #45403d;
+  bg-alt: #32302f;
+
+  fg: #fbf1c7;
+  fg-alt: #d4be98;
+
+  accent: #89b482;
+
+  
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+} */
+
+// Rose Pine
+// * {
+//   bg: #191724;
+//   bg-alt: #26233a;
+//   bg-selected: #31748f;
+
+//   fg: #e0def4;
+//   fg-alt: #908caa;
+
+//   accent: #c4a7e7;
+
+  
+//   border: 0;
+//   margin: 0;
+//   padding: 0;
+//   spacing: 0;
+// }
+
+// Everforest
+// * {
+//   bg: #272e33;
+//   bg-alt: #2d353b;
+//   bg-selected: #475258;
+
+//   fg: #d3c6aa;
+//   fg-alt: #d3c6aa;
+
+//   accent: #a7c080;
+
+  
+//   border: 0;
+//   margin: 0;
+//   padding: 0;
+//   spacing: 0;
+// }
+
+// Dracula
+// * {
+//   bg: #282a36;
+//   bg-alt: #21222c;
+//   bg-selected: #44475a;
+
+//   fg: #f8f8f2;
+//   fg-alt: #f8f8f2;
+
+//   accent: #50fa7b;
+
+  
+//   border: 0;
+//   margin: 0;
+//   padding: 0;
+//   spacing: 0;
+// }
+
+window {
+  width: 30%;
+  background-color: @bg;
+      height: 220px;
+    width: 600px;
+}
+
+element {
+  padding: 8 12;
+  background-color: transparent;
+  text-color: @fg-alt;
+  border-radius: 10px;
+}
+
+element selected {
+  text-color: @fg;
+  background-color: @bg-selected;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 14;
+  padding: 0 10 0 0;
+  background-color: transparent;
+}
+
+entry {
+  padding: 12;
+  background-color: @bg;
+  text-color: @accent;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+
+listview {
+  background-color: @bg;
+  columns: 1;
+  lines: 5;
+  padding:6;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg;
+  text-color: @accent;
+}

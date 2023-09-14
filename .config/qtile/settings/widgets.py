@@ -72,7 +72,7 @@ def open_pavu():
 
 
 def open_powermenu():
-    qtile.cmd_spawn("power")
+    qtile.cmd_spawn(os.path.expanduser("~/.local/bin/powermenu.sh"))
 
 
 primary_widgets = [
