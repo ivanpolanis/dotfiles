@@ -59,4 +59,3 @@ sudo mv mirrorlist /etc/pacman.d/mirrorlist
 # Done
 printf "\n${GRN}>> Done!${NC}\n"
 read -p "Press any key to exit"
-

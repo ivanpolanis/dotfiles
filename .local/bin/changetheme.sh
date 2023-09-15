@@ -14,8 +14,10 @@ $catppuccin" | rofi -dmenu -i -p "Themes" \
   -lines 2 -line-margin 3 -line-padding 10 -scrollbar-width "0")
 
 alacritty_dir="$HOME/.config/alacritty/"
+qtile_dir="$HOME/.config/qtile"
 nvim_config_file="$HOME/.config/nvim/init.lua"
 tmux_dir="$HOME/.config/tmux"
+wallpaper_dir="$HOME/.local/wallpapers"
 
 # Do something based on selected option
 if [ "$selected_option" == "$tokyo" ]; then
@@ -28,6 +30,10 @@ if [ "$selected_option" == "$tokyo" ]; then
   if [ -e $alacritty_dir ]; then
     cp -f "$alacritty_dir/themes/tokyonight.yml" "$alacritty_dir/alacritty.yml"
   fi
+  if [ -f "$wallpaper_dir/2.jpg" ]; then
+    feh --bg-scale "$wallpaper_dir/2.jpg"
+    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/2.jpg"/' "$qtile_dir/autostart.sh"
+  fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 elif [ "$selected_option" == "$nord" ]; then
   sed -i "\$s/.*/colors = $nord/" "$HOME/.config/qtile/settings/pallete.py"
@@ -38,6 +44,10 @@ elif [ "$selected_option" == "$nord" ]; then
   fi
   if [ -e $alacritty_dir ]; then
     cp -f "$alacritty_dir/themes/nord.yml" "$alacritty_dir/alacritty.yml"
+  fi
+  if [ -f "$wallpaper_dir/nord.png" ]; then
+    feh --bg-scale "$wallpaper_dir/nord.png"
+    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/nord.png"/' "$qtile_dir/autostart.sh"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 elif [ "$selected_option" == "$catppuccin" ]; then
