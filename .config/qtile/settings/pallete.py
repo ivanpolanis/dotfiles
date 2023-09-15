@@ -52,5 +52,23 @@ catppuccin = [
     ["#171724", "#171724"],  # 14 blue (bright)
 ]
 
+gruvbox = [
+    ["#282828", "#282828"],  # 0 background
+    ["#a89984", "#a89984"],  # 1 foreground
+    ["#7c6f64", "#7c6f64"],  # 2 background lighter
+    ["#cc241d", "#cc241d"],  # 3 red
+    ["#98971a", "#98971a"],  # 4 green
+    ["#d79921", "#d79921"],  # 5 yellow
+    ["#458588", "#458588"],  # 6 blue
+    ["#b16286", "#b16286"],  # 7 magenta
+    ["#689d6a", "#689d6a"],  # 8 cyan
+    ["#fbf1c7", "#fbf1c7"],  # 9 white
+    ["#303030", "#303030"],  # 10 black
+    ["#fb4934", "#fb4934"],  # 11 red (bright)
+    ["#b8bb26", "#b8bb26"],  # 12 green (bright)
+    ["#fabd2f", "#fabd2f"],  # 13 yellow (bright)
+    ["#202020", "#202020"],  # 14 blue (bright)
+]
 
-colors = tokyonight
+
+colors = catppuccin

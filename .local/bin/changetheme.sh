@@ -4,11 +4,13 @@
 tokyo="tokyonight"
 nord="nord"
 catppuccin="catppuccin"
+gruvbox="gruvbox"
 
 # Get answer from user via rofi
 selected_option=$(echo "$tokyo
 $nord
-$catppuccin" | rofi -dmenu -i -p "Themes" \
+$catppuccin
+$gruvbox" | rofi -dmenu -i -p "Themes" \
   -config "~/.config/rofi/powermenu.rasi" \
   -width "10" \
   -lines 2 -line-margin 3 -line-padding 10 -scrollbar-width "0")
@@ -59,6 +61,25 @@ elif [ "$selected_option" == "$catppuccin" ]; then
   fi
   if [ -e $alacritty_dir ]; then
     cp -f "$alacritty_dir/themes/catppuccin.yml" "$alacritty_dir/alacritty.yml"
+  fi
+  if [ -f "$wallpaper_dir/catppuccin.png" ]; then
+    feh --bg-scale "$wallpaper_dir/catppuccin.png"
+    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/catppuccin.png"/' "$qtile_dir/autostart.sh"
+  fi
+  xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
+elif [ "$selected_option" == "$gruvbox" ]; then
+  sed -i "\$s/.*/colors = $gruvbox/" "$HOME/.config/qtile/settings/pallete.py"
+  sed -i '$s/.*/vim.cmd [[colorscheme gruvbox]]/' "$nvim_config_file"
+  if [ -e $tmux_dir ]; then
+    cp -f "$tmux_dir/themes/gruvbox.conf" "$tmux_dir/tmux.conf"
+    tmux source "$tmux_dir/tmux.conf"
+  fi
+  if [ -e $alacritty_dir ]; then
+    cp -f "$alacritty_dir/themes/gruvbox.yml" "$alacritty_dir/alacritty.yml"
+  fi
+  if [ -f "$wallpaper_dir/gruvbox.png" ]; then
+    feh --bg-scale "$wallpaper_dir/gruvbox.png"
+    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/gruvbox.png"/' "$qtile_dir/autostart.sh"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 else

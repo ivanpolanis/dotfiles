@@ -67,7 +67,7 @@ gitinstall() {
       cd "$dir" || echo "Failed installing $1 (GIT)"
       sudo -u "$name" git pull --force origin master
     }
-  cd "$dir" #|| exit 1
+  cd "$dir" || return 1
 }
 
 pipinstall() {
