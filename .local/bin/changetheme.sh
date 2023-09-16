@@ -11,9 +11,9 @@ selected_option=$(echo "$tokyo
 $nord
 $catppuccin
 $gruvbox" | rofi -dmenu -i -p "Themes" \
-  -config "~/.config/rofi/powermenu.rasi" \
   -width "10" \
-  -lines 2 -line-margin 3 -line-padding 10 -scrollbar-width "0")
+  -l 4 \
+  -mesg "T H E M E S")
 
 alacritty_dir="$HOME/.config/alacritty/"
 qtile_dir="$HOME/.config/qtile"
@@ -34,7 +34,7 @@ if [ "$selected_option" == "$tokyo" ]; then
   fi
   if [ -f "$wallpaper_dir/2.jpg" ]; then
     feh --bg-scale "$wallpaper_dir/2.jpg"
-    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/2.jpg"/' "$qtile_dir/autostart.sh"
+    sed -i '$s/.*/feh --bg-scale "$HOME\/.local\/wallpapers\/2.png"/' "$qtile_dir/autostart.sh"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 elif [ "$selected_option" == "$nord" ]; then
@@ -49,7 +49,7 @@ elif [ "$selected_option" == "$nord" ]; then
   fi
   if [ -f "$wallpaper_dir/nord.png" ]; then
     feh --bg-scale "$wallpaper_dir/nord.png"
-    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/nord.png"/' "$qtile_dir/autostart.sh"
+    sed -i '$s/.*/feh --bg-scale "$HOME\/.local\/wallpapers\/nord.png"/' "$qtile_dir/autostart.sh"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 elif [ "$selected_option" == "$catppuccin" ]; then
@@ -64,7 +64,7 @@ elif [ "$selected_option" == "$catppuccin" ]; then
   fi
   if [ -f "$wallpaper_dir/catppuccin.png" ]; then
     feh --bg-scale "$wallpaper_dir/catppuccin.png"
-    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/catppuccin.png"/' "$qtile_dir/autostart.sh"
+    sed -i '$s/.*/feh --bg-scale "$HOME\/.local\/wallpapers\/catppuccin.png"/' "$qtile_dir/autostart.sh"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 elif [ "$selected_option" == "$gruvbox" ]; then
@@ -79,7 +79,7 @@ elif [ "$selected_option" == "$gruvbox" ]; then
   fi
   if [ -f "$wallpaper_dir/gruvbox.png" ]; then
     feh --bg-scale "$wallpaper_dir/gruvbox.png"
-    sed -i '$s/.*/feh --bg-scale "$wallpaper_dir/gruvbox.png"/' "$qtile_dir/autostart.sh"
+    sed -i '$s/.*/feh --bg-scale "$HOME\/.local\/wallpapers\/gruvbox.png"/' "$qtile_dir/autostart.sh"
   fi
   xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
 else
