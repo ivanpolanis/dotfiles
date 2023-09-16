@@ -1,17 +1,16 @@
 #!/bin/env bash
 
 # Themes avaible
-tokyo="tokyonight"
-nord="nord"
-catppuccin="catppuccin"
-gruvbox="gruvbox"
+tokyo="󰨶   Tokyonight"
+nord="󱡂   Nord"
+catppuccin="   Catppuccin"
+gruvbox="   Gruvbox"
 
 # Get answer from user via rofi
 selected_option=$(echo "$tokyo
 $nord
 $catppuccin
 $gruvbox" | rofi -dmenu -i -p "Themes" \
-  -width "10" \
   -l 4 \
   -mesg "T H E M E S")
 
@@ -26,7 +25,7 @@ rofi_themes="$HOME/.local/share/rofi/themes"
 # Do something based on selected option
 if [ "$selected_option" == "$tokyo" ]; then
 
-  sed -i "\$s/.*/colors = $tokyo/" "$HOME/.config/qtile/settings/pallete.py"
+  sed -i "\$s/.*/colors = tokyonight/" "$HOME/.config/qtile/settings/pallete.py"
   sed -i '$s/.*/vim.cmd [[colorscheme tokyonight-night]]/' "$nvim_config_file"
   if [ -e $tmux_dir ]; then
     cp -f "$tmux_dir/themes/tokyonight.conf" "$tmux_dir/tmux.conf"
@@ -47,7 +46,7 @@ if [ "$selected_option" == "$tokyo" ]; then
 
 elif [ "$selected_option" == "$nord" ]; then
 
-  sed -i "\$s/.*/colors = $nord/" "$HOME/.config/qtile/settings/pallete.py"
+  sed -i "\$s/.*/colors = nord/" "$HOME/.config/qtile/settings/pallete.py"
   sed -i '$s/.*/vim.cmd [[colorscheme nord]]/' "$nvim_config_file"
   if [ -e $tmux_dir ]; then
     cp -f "$tmux_dir/themes/nord.conf" "$tmux_dir/tmux.conf"
@@ -68,7 +67,7 @@ elif [ "$selected_option" == "$nord" ]; then
 
 elif [ "$selected_option" == "$catppuccin" ]; then
 
-  sed -i "\$s/.*/colors = $catppuccin/" "$HOME/.config/qtile/settings/pallete.py"
+  sed -i "\$s/.*/colors = catppuccin/" "$HOME/.config/qtile/settings/pallete.py"
   sed -i '$s/.*/vim.cmd [[colorscheme catppuccin-mocha]]/' "$nvim_config_file"
   if [ -e $tmux_dir ]; then
     cp -f "$tmux_dir/themes/catppuccin.conf" "$tmux_dir/tmux.conf"
@@ -89,7 +88,7 @@ elif [ "$selected_option" == "$catppuccin" ]; then
 
 elif [ "$selected_option" == "$gruvbox" ]; then
 
-  sed -i "\$s/.*/colors = $gruvbox/" "$HOME/.config/qtile/settings/pallete.py"
+  sed -i "\$s/.*/colors = gruvbox/" "$HOME/.config/qtile/settings/pallete.py"
   sed -i '$s/.*/vim.cmd [[colorscheme gruvbox]]/' "$nvim_config_file"
   if [ -e $tmux_dir ]; then
     cp -f "$tmux_dir/themes/gruvbox.conf" "$tmux_dir/tmux.conf"
