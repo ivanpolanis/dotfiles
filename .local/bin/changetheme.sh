@@ -43,8 +43,7 @@ change() {
     sed -i 's/^@theme\s*\(.*\)/@theme \"'"$1"'\"/' "$rofi_dir/config.rasi"
     sed -i 's/^@theme\s*\(.*\)/@theme \"'"$1"'\"/' "$rofi_dir/powermenu.rasi"
   fi
-  xdotool keydown Super keydown Ctrl key r keyup r keyup Ctrl keyup Super
-
+  qtile cmd-obj -o cmd -f restart
 }
 
 # Do something based on selected option
