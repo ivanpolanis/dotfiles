@@ -7,4 +7,4 @@ configuration {
 }
  
  
-@theme "catppuccin-mocha"
+@theme "nord"
