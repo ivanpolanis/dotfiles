@@ -80,7 +80,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "s", lazy.spawn(screenshot)),
 
     # Spotify
-    ([mod], "p", lazy.spawn("spotify-launcher")),
+    ([mod], "p", lazy.spawn(spotify)),
 
     # Zathura
 

@@ -11,5 +11,6 @@ code_editor="code"
 launcher="rofi -show drun"
 screenshot="scrot --select --line mode=edge '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'"
 pdf_viewer="zathura"
+spotify="spotify"
 power_menu=os.path.expanduser("~/.local/bin/powermenu.sh")
 change_theme=os.path.expanduser("~/.local/bin/changetheme.sh")
