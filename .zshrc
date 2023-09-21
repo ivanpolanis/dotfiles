@@ -70,6 +70,8 @@ alias gpl='git pull'
 
 alias wifi='nmcli --ask dev wifi connect'
 
+alias xmod="xmodmap /home/ivan/.Xmodmap"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
