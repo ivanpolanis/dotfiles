@@ -72,6 +72,8 @@ alias wifi='nmcli --ask dev wifi connect'
 
 alias xmod="xmodmap /home/ivan/.Xmodmap"
 
+alias alf="sed -i 's/\s*size:\(.*\)/  size: 8/' /home/ivan/.config/alacritty/alacritty.yml"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
