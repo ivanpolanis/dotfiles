@@ -51,6 +51,10 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # Change theme
     ([mod, "control"], "t", lazy.spawn(change_theme)),
 
+    # Reload Xmodmap
+
+    ([mod], "n", lazy.spawn("xmodmap /home/ivan/.Xmodmap")),
+
 
     # ------------ App Configs ------------
 
@@ -84,11 +88,17 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Zathura
 
-    ([mod], "o", lazy.spawn(pdf_viewer)),
+    ([mod], "z", lazy.spawn(pdf_viewer)),
+
+    # Obsidian
+
+    ([mod], "o", lazy.spawn(obsidian)),
 
     # Discord
 
     ([mod], "d", lazy.spawn(discord)),
+
+
 
     # ------------ Hardware Configs ------------
 
