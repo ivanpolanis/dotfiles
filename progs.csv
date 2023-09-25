@@ -56,6 +56,7 @@ p,ripgrep
 p,maven
 p,ttf-ubuntu-mono-nerd
 p,ttf-jetbrains-mono-nerd
+p,ttf-hack-nerd
 p,ranger
 i,psutil
 p,python-requests
@@ -74,7 +75,8 @@ p,noto-fonts-cjk
 p,noto-fonts-emoji
 a,ttf-symbola
 a,ttf-twemoji
-a,qtile-extras-git
+p,btop
+a,qtile-extras
 p,python-dbus-next
 a,discord
 p,obsidian
