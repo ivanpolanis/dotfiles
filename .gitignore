@@ -1,0 +1,11 @@
+/*
+
+!.gitignore
+!.local
+!.config
+!.zshrc
+!.Xmodmap
+!.xinitrc
+!autoinstall.sh
+!progs.csv
+!README.md
