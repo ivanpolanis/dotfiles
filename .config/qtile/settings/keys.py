@@ -65,7 +65,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "r", lazy.spawn("alacritty -e ranger")),
 
     # Window Nav
-    ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+    ([mod, "shift"], "m", lazy.spawn("rofi -show window")),
 
     # Browser
     ([mod], "b", lazy.spawn(browser)),
