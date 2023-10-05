@@ -19,6 +19,7 @@ usercheck() {
   echo -e "Enter usename:"
   read name
   id "$name" > /dev/null 2> /dev/null || error "Invalid username!"
+  mkdir -p "/home/$name/.local/src"
   export homedir="/home/$name"
   export repodir="/home/$name/.local/src"
 }
@@ -119,7 +120,7 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/larbs-temp # allow wheel 
 
 # Install aur helper manually
 # echo "##### Installing AUR Helper #####"
-# install_aur "${aurhelper}" || error "Failed to install AUR helper"
+install_aur "${aurhelper}" || error "Failed to install AUR helper"
 
 # Main instalattion loop
 
