@@ -3,6 +3,7 @@
 !.gitignore
 !.local
 !.config
+!.screenshots
 !.zshrc
 !.Xmodmap
 !.xinitrc
