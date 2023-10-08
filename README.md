@@ -38,4 +38,4 @@ Feel free to modify these dotfiles to suit your preferences. You can add or remo
 
 ## Screenshot
 
-![My config](https://imgur.com/ZBSChH1)
+![Config](.screenshots/qtile.png)
