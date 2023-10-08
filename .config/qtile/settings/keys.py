@@ -85,6 +85,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     # Screenshot
     ([mod, "shift"], "s", lazy.spawn(screenshot)),
+    ([],"Print", lazy.spawn(full_screenshot)),
 
     # Spotify
     ([mod], "p", lazy.spawn(spotify)),
