@@ -93,7 +93,8 @@ primary_widgets = [
             padding=0,
         ),
         widget.GroupBox(
-            font="Font Awesome 6 Free Solid",
+            font="UbuntuMono Nerd Font",
+            fontsize=18,
             **group_box_settings,
         ),
         widget.TextBox(

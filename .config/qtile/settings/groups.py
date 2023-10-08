@@ -1,12 +1,17 @@
 # Qtile workspaces
 
-from libqtile.config import Key, Group
+from libqtile.config import Key, Group, Match
 from libqtile.command import lazy
 from .keys import mod, keys
 
-groups = [Group(i) for i in [
-    " I  ", " II  ", " III ", " IV  ", " V ", " VI  ", " VII  ", " VIII  ", " IX ",
-]]
+groups = [
+    Group(" 󰈹 ", matches=[Match(wm_class=["firefox"])]),
+    Group("  ", matches=[Match(wm_class=[""])]),
+    Group("  ", matches=[Match(wm_class=[""])]),
+    Group("  ", matches=[Match(wm_class=[""])]),
+    Group(" 󰙯 ", matches=[Match(wm_class=["discord"])]),
+    Group("  ", matches=[Match(wm_class=["spotify","spotify-launcher"])]),
+]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
