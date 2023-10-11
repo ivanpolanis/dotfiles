@@ -4,4 +4,4 @@
 # systray volume
 picom &
 
-feh --bg-scale $HOME/.local/wallpapers/catppuccin.png
+feh --bg-scale $HOME/.local/wallpapers/2.jpg

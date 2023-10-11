@@ -71,4 +71,4 @@ gruvbox = [
 ]
 
 
-colors = catppuccin
+colors = tokyonight
