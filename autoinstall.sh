@@ -120,7 +120,7 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/larbs-temp # allow wheel 
 
 # Install aur helper manually
 # echo "##### Installing AUR Helper #####"
-install_aur "${aurhelper}" || error "Failed to install AUR helper"
+# install_aur "${aurhelper}" || error "Failed to install AUR helper"
 
 # Main instalattion loop
 

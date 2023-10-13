@@ -58,7 +58,7 @@ p,ttf-ubuntu-mono-nerd
 p,ttf-jetbrains-mono-nerd
 p,ttf-hack-nerd
 p,ranger
-i,psutil
+p,python-psutil
 p,python-requests
 p,lm_sensors
 p,gparted
