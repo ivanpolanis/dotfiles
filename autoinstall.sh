@@ -98,6 +98,15 @@ installationloop() {
   done < "$tmpfile"
 }
 
+update_grub() {
+  echo "Do you want to update grub? (y/n)"
+  read option
+  [[ $option != 'y' ]] && return 0
+  [[ -d /tmp ]] || mkdir /tmp
+  git clone https://github.com/vinceliuice/grub2-themes.git /tmp/grub2-themes && cd /tmp/grub2-themes
+  sudo ./install.sh -t vimix
+}
+
 ### SCRIPT ###
 
 welcome_msj
@@ -132,5 +141,7 @@ sudo -u "$name" mkdir -p "/home/$name/.cache/zsh/"
 
 #enable lightdm service
 systemctl enable lightdm
+
+update_grub
 
 echo -e "DONE! Now reboot your computer"
