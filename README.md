@@ -10,6 +10,7 @@ These are my dotfiles for configuring my Arch Linux environment. These dotfiles 
 - **Shell:** [Zsh](https://www.zsh.org/)
 - **Compositor:** [Picom](https://github.com/yshui/picom)
 - **Code Editor:** [Neovim (nvim)](https://neovim.io/)
+- **Bootloader:** [Grub](https://www.gnu.org/software/grub/grub.html)
 
 ## Prerequisites
 
