@@ -24,7 +24,8 @@ Before running the installer, make sure you have:
 To set up my environment, you can use the provided autoinstaller script. It will install the required packages, symlink the dotfiles, and configure your system according to my preferences.
 
 ```bash
-./autoinstall.sh
+chmod +x autoinstall.sh
+sudo ./autoinstall.sh
 ```
 
 Make sure to review the `autoinstall.sh` script before running it to ensure it aligns with your preferences.
