@@ -24,6 +24,9 @@ Before running the installer, make sure you have:
 To set up my environment, you can use the provided autoinstaller script. It will install the required packages, symlink the dotfiles, and configure your system according to my preferences.
 
 ```bash
+git clone https://github.com/ivanpolanis/dotfiles
+cd dotfiles
+cp progs.csv ~/
 chmod +x autoinstall.sh
 sudo ./autoinstall.sh
 ```
