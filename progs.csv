@@ -33,6 +33,8 @@ p,python-pip
 p,qtile
 p,rofi
 p,scrot
+p,shfmt
+a,spotify
 p,thunar
 p,unrar
 p,unzip
@@ -41,7 +43,6 @@ p,xclip
 p,zsh
 p,zsh-autosuggestions
 p,zsh-syntax-highlighting
-a,spotify
 p,man
 p,fzf
 p,xclip
