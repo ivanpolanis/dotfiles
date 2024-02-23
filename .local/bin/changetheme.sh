@@ -33,7 +33,7 @@ change() {
     tmux source "$tmux_dir/tmux.conf"
   fi
   if [ -e $alacritty_dir ]; then
-    cp -f "$alacritty_dir/themes/$1.yml" "$alacritty_dir/alacritty.yml"
+    cp -f "$alacritty_dir/themes/$1.toml" "$alacritty_dir/alacritty.toml"
   fi
   if [ -f "$wallpaper_dir/$3" ]; then
     feh --bg-scale "$wallpaper_dir/$3"
