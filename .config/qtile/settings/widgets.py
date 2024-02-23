@@ -22,7 +22,7 @@ from qtile_extras.widget.decorations import RectDecoration
 
 from .pallete import colors
 
-laptop=1
+laptop=False
 
 widget_defaults = dict(
     font="FiraCode Nerd Font",
@@ -316,5 +316,5 @@ conditional_widgets = [
 ]
 
 position_to_insert = 19
-if laptop==1:
+if laptop:
     primary_widgets[position_to_insert:position_to_insert] = conditional_widgets
