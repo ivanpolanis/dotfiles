@@ -49,7 +49,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
 
     ([mod, "control"], "q", lazy.shutdown()),
 
-    ([mod, "shift"], "l", lazy.spawn("betterlockscreen -l")),
+    # ([mod, "shift"], "l", lazy.spawn("betterlockscreen -l")),
 
     # Change theme
     ([mod, "control"], "t", lazy.spawn(change_theme)),
