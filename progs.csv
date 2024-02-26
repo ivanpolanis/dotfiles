@@ -71,7 +71,6 @@ p,zathura-djvu
 p,jq
 p,rustup
 p,tmux
-p,firefox
 p,noto-fonts-cjk
 p,noto-fonts-emoji
 a,ttf-symbola
@@ -83,3 +82,4 @@ p,obsidian
 p,pacman-contrib
 p,pamixer
 i,pulsectl-asyncio
+a,brave-bin

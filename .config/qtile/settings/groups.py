@@ -5,7 +5,7 @@ from libqtile.command import lazy
 from .keys import mod, keys
 
 groups = [
-    Group(" 󰈹 ", matches=[Match(wm_class=["firefox","LibreWolf"])]),
+    Group(" 󰈹 ", matches=[Match(wm_class=["firefox","LibreWolf","Brave"])]),
     Group("  ", matches=[Match(wm_class=[""])]),
     Group("  ", matches=[Match(wm_class=[""])]),
     Group("  ", matches=[Match(wm_class=["org.pwmt.zathura","notion-app-enhanced"])]),

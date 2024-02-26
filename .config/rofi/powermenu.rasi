@@ -7,4 +7,4 @@ configuration {
 }
  
  
-@theme "gruvbox"
+@theme "catppuccin"

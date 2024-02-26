@@ -3,7 +3,7 @@ import os
 mod="mod4"
 alt="mod1"
 terminal="alacritty"
-browser="firefox"
+browser="brave"
 private="librewolf"
 discord="discord"
 file_manager="thunar"
