@@ -83,3 +83,4 @@ p,pacman-contrib
 p,pamixer
 i,pulsectl-asyncio
 a,brave-bin
+p,zoxide
