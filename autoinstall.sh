@@ -33,17 +33,10 @@ welcome_msj() {
 }
 
 install_aur() {
-  #installs $1 manually
-  pacman -Qq "$1" > /dev/null && return 0 #if it is already installed
-  sudo -u "$name" mkdir -p "$repodir/$1"  #create directory
-  sudo -u "$name" git -C "$repodir" clone --depth 1 --single-branch \
-    --no-tags -q "https://aur.archlinux.org/$1.git" "$repodir/$1" \
-    || {
-      cd "$repodir/$1" || return 1
-      sudo -u "$name" git pull --force origin master
-    }
+  sudo -u "$name" mkdir -p "$repodir/$1" #create directory
+  sudo -u "$name" git -C "$repodir" clone --depth 1 --no-tags -q "https://aur.archlinux.org/$1.git" "$repodir/$1"
   cd "$repodir/$1" || return 1
-  sudo -u "$name" -D "$repodir/$1" makepkg --noconfirm -si > /dev/null 2>&1 || return 1
+  sudo -u "$name" makepkg --noconfirm -si "$repodir/$1" > /dev/null 2>&1 || return 1
 }
 
 installpkg() {
