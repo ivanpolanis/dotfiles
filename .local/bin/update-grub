@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-#	Update grub
+#	UpdateGrub
 grub-mkconfig -o /boot/grub/grub.cfg

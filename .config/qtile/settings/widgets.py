@@ -22,7 +22,7 @@ from qtile_extras.widget.decorations import RectDecoration
 
 from .pallete import colors
 
-laptop=True
+laptop=False
 
 widget_defaults = dict(
     font="FiraCode Nerd Font",
