@@ -24,7 +24,7 @@ exec --no-startup-id nm-applet
 
 #Set Desktop Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.local/wallpapers/cat1.png
-bindsym $mod + F6 exec feh --bg-fill --randomize /home/ivan/.local/wallpapers/
+bindsym $mod + F6 exec --no-startup-id feh --bg-fill --randomize /home/ivan/.local/wallpapers/
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -38,13 +38,13 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+10 i3block
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec --no-startup-id $term
 
 # kill focused window
 bindsym $mod+w kill
 
 # A more modern dmenu replacement is rofi:
-bindsym $mod+m exec rofi -show drun
+bindsym $mod+m exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+h focus left
@@ -223,7 +223,6 @@ bindsym --release $mod+shift+x exec --no-startup-id slock
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+P exec killall picom
 
-bindsym $mod+Shift+d exec rofi -show run
 bindsym Ctrl+Shift+Escape exec xfce4-taskmanager
 bindsym $mod+Shift+W sticky toggle
 # read 1 character and go to the window with the character
@@ -306,4 +305,4 @@ exec --no-startup-id greenclip daemon>/dev/null
 exec_always --no-startup-id "sh -c 'sleep 1; exec pkill -RTMIN+10 i3blocks'"
 
 #Autostarting
-exec xset r rate 240 42
+exec --no-startup-id xset r rate 240 42

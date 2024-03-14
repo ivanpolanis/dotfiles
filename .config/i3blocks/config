@@ -21,12 +21,6 @@ color=#eba0ac
 command=date '+<big> <span color="#74c7ec">%I:%M <span font="Aquire">%p</span> </span><span font="Aquire" color="#fab387">%a %b </span>%d/%m </big>'
 interval=5
 
-[scratchpadtmux]
-color=#f9e2af
-markup=pango
-interval=1
-align=right
-
 
 [volume]
 color=#eba0ac
@@ -47,6 +41,7 @@ interval=10
 
 [battery]
 markup=pango
+command= ~/.local/bin/bmon.sh
 interval=1
 
 [separator]
