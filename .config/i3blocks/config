@@ -33,7 +33,7 @@ interval=1
 
 [memory]
 color=#f9e2af
-command=/usr/bin/env bash -c "total=\$(grep -e '^MemTotal' -m 1 /proc/meminfo | awk '{print \$2}'); available=\$(grep -e '^MemAvailable' -m 1 /proc/meminfo | awk '{print \$2}'); memusage=\$((100 - (available * 100 / total))); printf '%02d\n' \$memusage"
+command=/usr/bin/env bash -c "total=\$(grep -e '^MemTotal' -m 1 /proc/meminfo | awk '{print \$2}'); available=\$(grep -e '^MemAvailable' -m 1 /proc/meminfo | awk '{print \$2}'); memusage=\$(((total - available) / 1024)); total=\$(( total / 1024 ));printf '%02dMB/%02dMB\n' \$memusage \$total"
 label=󰍛 
 interval=10
 
