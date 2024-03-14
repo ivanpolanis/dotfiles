@@ -70,5 +70,4 @@ gruvbox = [
     ["#202020", "#202020"],  # 14 blue (bright)
 ]
 
-
 colors = catppuccin

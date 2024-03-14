@@ -16,9 +16,6 @@ p,feh
 a,librewolf-bin
 p,github-cli
 p,gnome-keyring
-p,htop
-p,jdk-openjdk
-p,jre-openjdk
 p,lightdm-gtk-greeter
 p,lsd
 p,mesa
@@ -52,9 +49,7 @@ p,xorg-xinit
 p,xorg-xmodmap
 a,visual-studio-code-bin
 p,npm
-a,jdtls
 p,ripgrep
-p,maven
 p,ttf-ubuntu-mono-nerd
 p,ttf-jetbrains-mono-nerd
 p,ttf-hack-nerd
@@ -70,7 +65,6 @@ p,zathura-ps
 p,zathura-djvu
 p,jq
 p,rustup
-p,tmux
 p,noto-fonts-cjk
 p,noto-fonts-emoji
 a,ttf-symbola
@@ -84,3 +78,6 @@ p,pamixer
 i,pulsectl-asyncio
 a,brave-bin
 p,zoxide
+p,i3
+p,i3blocks
+p,maim
