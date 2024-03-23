@@ -249,7 +249,6 @@ bindsym Mod4+Print exec --no-startup-id maim "/home/$USER/Pictures/$(date "+%d_%
 bindsym $mod+n exec --no-startup-id maim --hidecursor -i $(xdotool getactivewindow) | xclip -selection clipboard -t image/png && notify-send -t 1000 "Window SS in Clipboard"
 
 bindsym $mod+Shift+Print exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/$(date "+%d_%b_%r").png"
-bindsym $mod+o exec maim -s | tesseract stdin - | xclip -in -selection clipboard && notify-send "Copied Text" "$(xclip -out -selection clipboard | tr '\n' ' ')"
 # Mode for launching frequently used configs
 bindsym $mod+c mode "(c)onfig (i)3config (n)vim (l)inuxbkup i3(b)locks (s)cripts bash(r)c (o)ldfiles"
 mode "(c)onfig (i)3config (n)vim (l)inuxbkup i3(b)locks (s)cripts bash(r)c (o)ldfiles"{
