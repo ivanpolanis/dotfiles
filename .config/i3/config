@@ -24,7 +24,7 @@ exec --no-startup-id nm-applet
 
 #Set Desktop Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.local/wallpapers/cat1.png
-bindsym $mod + F6 exec --no-startup-id feh --bg-fill --randomize /home/ivan/.local/wallpapers/
+bindsym $mod + F6 exec --no-startup-id feh --bg-fill --randomize ~/.local/wallpapers/
 
 
 # Use pactl to adjust volume in PulseAudio.
@@ -43,7 +43,7 @@ bindsym $mod+Return exec --no-startup-id $term
 # kill focused window
 bindsym $mod+w kill
 
-# A more modern dmenu replacement is rofi:
+# rofi:
 bindsym $mod+m exec --no-startup-id rofi -show drun
 
 # change focus
@@ -235,12 +235,12 @@ bindsym $mod+Shift+G exec rofi -modi "clipboard:greenclip print" -show clipboard
 bindsym $mod+greater move workspace to output next
 
 #set a window to full opacity always
-bindsym $mod+Shift+o exec picom-trans -c -o 100
+bindsym $mod+Shift+o exec --no-startup-id picom-trans -c -o 100
 #normal opacity
-bindsym $mod+t exec picom-trans -c -t
+bindsym $mod+t exec --no-startup-id picom-trans -c -t
 
 #browser
-bindsym $mod+b exec brave
+bindsym $mod+b exec --no-startup-id brave
 
 # Screenshots
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send -t 1000 "SS in Clipboard"
@@ -304,4 +304,4 @@ exec --no-startup-id greenclip daemon>/dev/null
 exec_always --no-startup-id "sh -c 'sleep 1; exec pkill -RTMIN+10 i3blocks'"
 
 #Autostarting
-exec --no-startup-id xset r rate 240 42
+exec --no-startup-id xset r rate 230 42
