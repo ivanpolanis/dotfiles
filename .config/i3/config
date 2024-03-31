@@ -250,15 +250,16 @@ bindsym $mod+n exec --no-startup-id maim --hidecursor -i $(xdotool getactivewind
 
 bindsym $mod+Shift+Print exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/$(date "+%d_%b_%r").png"
 # Mode for launching frequently used configs
-bindsym $mod+c mode "(c)onfig (i)3config (n)vim (l)inuxbkup i3(b)locks (s)cripts bash(r)c (o)ldfiles"
-mode "(c)onfig (i)3config (n)vim (l)inuxbkup i3(b)locks (s)cripts bash(r)c (o)ldfiles"{
+bindsym $mod+c mode "(c)onfig (i)3config (n)vim (l)inuxbkup i3(b)locks (s)cripts zsh(r)c (a)lias (o)ldfiles"
+mode "(c)onfig (i)3config (n)vim (l)inuxbkup i3(b)locks (s)cripts zsh(r)c (a)lias (o)ldfiles"{
     bindsym c exec "zsh -c 'cd ~/.config; st -e nvim . +Telescope\ find_files '"; mode "default"
     bindsym i exec $term -e nvim ~/.config/i3/config; mode "default"
     bindsym o exec $term -e nvim +Telescope\ oldfiles; mode "default"
-    bindsym r exec $term -e nvim ~/.bashrc; mode "default"
+    bindsym r exec $term -e nvim ~/.zshrc; mode "default"
     bindsym n exec "sh -c 'cd ~/.config/nvim/; $term -e nvim . +Telescope\ find_files '"; mode "default"
     bindsym l exec "sh -c 'cd /media/data/Linux_Backup/;$term -e nvim . +Telescope\ find_files'"; mode "default"
     bindsym b exec $term -e nvim ~/.config/i3blocks/config; mode "default"
+    bindsym a exec $term -e nvim ~/.config/.aliasrc ; mode "default"
     bindsym s exec "sh -c 'cd ~/scripts;$term -e nvim . +Telescope\ find_files'"; mode "default"
     bindsym $mod+c mode "default"
     bindsym Escape mode "default"
