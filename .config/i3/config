@@ -242,6 +242,9 @@ bindsym $mod+t exec --no-startup-id picom-trans -c -t
 #browser
 bindsym $mod+b exec --no-startup-id brave
 
+#ranger
+bindsym $mod+d exec --no-startup-id $term -e ranger
+
 # Screenshots
 bindsym Print exec --no-startup-id maim | xclip -selection clipboard -t image/png && notify-send -t 1000 "SS in Clipboard"
 bindsym $mod+Shift+S exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png && notify-send -t 1000 "SS in Clipboard"

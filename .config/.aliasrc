@@ -6,6 +6,7 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 
+alias gi='git init; git branch -m main'
 alias ga='git add'
 alias gp='git push'
 alias gs='git status'
