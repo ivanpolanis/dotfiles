@@ -72,7 +72,7 @@ usercheck
 
 echo "##### Installing all dependencies #####"
 
-for x in sudo zsh base-devel ca-certificates rustup python python-pip; do
+for x in sudo zsh base-devel ca-certificates python python-pip; do
   installpkg "$x"
 done
 

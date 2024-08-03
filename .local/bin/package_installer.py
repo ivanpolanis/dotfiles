@@ -6,8 +6,8 @@ def run_command(command):
     try:
         subprocess.run(command, check=True, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     except subprocess.CalledProcessError as e:
-        print(f"Error executing command: {command}")
-        print(e)
+        return False
+    return True
 
 def check_packages_exist(package_list,package_manager):
     valid_packages = []
@@ -37,23 +37,38 @@ def read_programs(file_path):
                     programs['git'].append(program)
     return programs
 
+def install_package(package, package_manager):
+    command_map= {
+        'pacman': f'sudo pacman --noconfirm --needed -S {package}',
+        'pip': f'sudo pacman --noconfirm --needed -S {package}',
+        'aur': f'sudo -u {username} {aurhelper} -S --noconfir {package}',
+    }                                               
+
+    if not run_command(command_map[package_manager]):
+        print(f"Failed to install package: {package}")
+
+
 def install_packages(package_list, package_manager):
     if package_list:
-        packages = ' '.join(package_list)
-        match package_manager:
-            case 'pacman':
-                print(f"Installing programs(pacman): {packages}")
-                run_command(f"sudo pacman --noconfirm --needed -S {packages}")
-            case 'pip':
-                print(f"Installing programs(pip): {packages}")
-                run_command(f"pip install --break-system-packages {packages}")
-            case 'aur':
-                print(f"Installing programs({package_manager}): {packages}")
-                run_command(f"sudo -u {username} {aurhelper} -S --noconfirm {packages}")
+        group_size = 10
+        for i in range(0,len(package_list),group_size):
+            group = package_list[i:i+group_size]
+            packages = ' '.join(package_list)
+            command_map= {
+                'pacman': f'sudo pacman --noconfirm --needed -S {packages}',
+                'pip': f'sudo pacman --noconfirm --needed -S {packages}',
+                'aur': f'sudo -u {username} {aurhelper} -S --noconfir {packages}',
+            }
+            print(f"Installing programs({package_manager}): {packages}")
+            if not run_command(command_map[package_manager]):
+                for package in group:
+                    install_package(package,package_manager)
+            
         
 def main():
-    global username, aurhelper
+    global username, aurhelper, command_map
 
+   
     parser = argparse.ArgumentParser(description="Automate Archlinux configuration setup")
     parser.add_argument("--username", required=True, help="Username for the installation")
     parser.add_argument("--aurhelper", default="paru", help="AUR helper to use (default: paru)")
