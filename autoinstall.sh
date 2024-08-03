@@ -101,7 +101,7 @@ stow --adopt .
 chsh -s /bin/zsh "$name" >/dev/null 2>&1
 sudo -u "$name" mkdir -p "/home/$name/.cache/zsh/"
 
-#enable lightdm service
-systemctl enable lightdm
+#enable gdm service
+systemctl enable gdm.service
 
 echo -e "DONE! Now reboot your computer"

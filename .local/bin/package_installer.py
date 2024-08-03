@@ -41,11 +41,11 @@ def install_package(package, package_manager):
     command_map= {
         'pacman': f'sudo pacman --noconfirm --needed -S {package}',
         'pip': f'sudo pacman --noconfirm --needed -S {package}',
-        'aur': f'sudo -u {username} {aurhelper} -S --noconfir {package}',
+        'aur': f'sudo -u {username} {aurhelper} -S --noconfirm {package}',
     }                                               
 
     if not run_command(command_map[package_manager]):
-        print(f"Failed to install package: {package}")
+        print(f"\033[91mFailed to install package: {package}\033[0m")
 
 
 def install_packages(package_list, package_manager):
@@ -53,11 +53,11 @@ def install_packages(package_list, package_manager):
         group_size = 10
         for i in range(0,len(package_list),group_size):
             group = package_list[i:i+group_size]
-            packages = ' '.join(package_list)
+            packages = ' '.join(group)
             command_map= {
                 'pacman': f'sudo pacman --noconfirm --needed -S {packages}',
                 'pip': f'sudo pacman --noconfirm --needed -S {packages}',
-                'aur': f'sudo -u {username} {aurhelper} -S --noconfir {packages}',
+                'aur': f'sudo -u {username} {aurhelper} -S --noconfirm {packages}',
             }
             print(f"Installing programs({package_manager}): {packages}")
             if not run_command(command_map[package_manager]):
