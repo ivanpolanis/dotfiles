@@ -24,7 +24,6 @@ usercheck() {
   export homedir="/home/$name"
   export repodir="/home/$name/.local/src"
 }
-
 welcome_msj() {
   #confirmation before installation
   echo "##### Welcome to my dotfiles install script! #####
@@ -92,7 +91,7 @@ install_aur "${aurhelper}" || error "Failed to install AUR helper"
 # Main instalattion loop
 progsfile=$(echo $"script_dir"/progs.csv)
 [[ -f "$progsfile" ]] || error "Program file doesn't exist"
-python "/home/$name/.local/bin/package_installer.py" --username "$name" --aurhelper "$aurhelper" --progsfile "$progsfile"
+python $"script_dir"/.local/bin/package_installer.py --username "$name" --aurhelper "$aurhelper" --progsfile "$progsfile"
 
 cd $script_dir"
 stow --adopt .
