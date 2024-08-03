@@ -72,7 +72,7 @@ usercheck
 
 echo "##### Installing all dependencies #####"
 
-for x in sudo zsh base-devel ca-certificates python python-pip; do
+for x in sudo zsh base-devel ca-certificates rustup python python-pip; do
   installpkg "$x"
 done
 
@@ -86,14 +86,15 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/larbs-temp  # allow wheel 
 
 # Install aur helper manually
 echo "##### Installing AUR Helper #####"
+sudo chmod -R 777 "$repodir"
 install_aur "${aurhelper}" || error "Failed to install AUR helper"
 
 # Main instalattion loop
-progsfile=$(echo $"script_dir"/progs.csv)
+progsfile=$(echo "$script_dir"/progs.csv)
 [[ -f "$progsfile" ]] || error "Program file doesn't exist"
-python $"script_dir"/.local/bin/package_installer.py --username "$name" --aurhelper "$aurhelper" --progsfile "$progsfile"
+python "$script_dir"/.local/bin/package_installer.py --username "$name" --aurhelper "$aurhelper" --progsfile "$progsfile"
 
-cd $script_dir"
+cd "$script_dir"
 stow --adopt .
 
 # Make zsh the default shell for the user.

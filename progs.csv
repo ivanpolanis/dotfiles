@@ -25,7 +25,6 @@ p,neovim
 p,pacman-contrib
 p,pavucontrol
 p,picom
-p,pulseaudio-bluetooth
 p,python-pip
 p,qtile
 p,rofi
@@ -64,7 +63,6 @@ p,zathura-pdf-poppler
 p,zathura-ps
 p,zathura-djvu
 p,jq
-p,rustup
 p,noto-fonts-cjk
 p,noto-fonts-emoji
 a,ttf-symbola
@@ -84,3 +82,4 @@ p,acpi
 p,maim
 p,silicon
 p,starship
+p,stow

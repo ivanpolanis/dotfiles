@@ -4,7 +4,7 @@ import argparse
 
 def run_command(command):
     try:
-        subprocess.run(command, check=True, shell=True, stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+        subprocess.run(command, check=True, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     except subprocess.CalledProcessError as e:
         print(f"Error executing command: {command}")
         print(e)
@@ -42,10 +42,13 @@ def install_packages(package_list, package_manager):
         packages = ' '.join(package_list)
         match package_manager:
             case 'pacman':
+                print(f"Installing programs(pacman): {packages}")
                 run_command(f"sudo pacman --noconfirm --needed -S {packages}")
             case 'pip':
+                print(f"Installing programs(pip): {packages}")
                 run_command(f"pip install --break-system-packages {packages}")
             case 'aur':
+                print(f"Installing programs({package_manager}): {packages}")
                 run_command(f"sudo -u {username} {aurhelper} -S --noconfirm {packages}")
         
 def main():
