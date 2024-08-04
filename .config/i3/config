@@ -14,7 +14,7 @@ exec --no-startup-id slock
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
-
+                                         
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -23,7 +23,7 @@ exec --no-startup-id slock
 exec --no-startup-id nm-applet
 
 #Set Desktop Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.local/wallpapers/cat1.png
+exec_always --no-startup-id feh --bg-fill ~/.local/wallpapers/wallhaven.jpg
 bindsym $mod + F6 exec --no-startup-id feh --bg-fill --randomize ~/.local/wallpapers/
 
 

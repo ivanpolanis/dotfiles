@@ -15,9 +15,9 @@ p,exa
 p,feh
 a,librewolf-bin
 p,github-cli
-p,gdm
 p,gnome-keyring
 p,lsd
+p,ly
 p,mesa
 p,nano
 p,neofetch
@@ -42,7 +42,7 @@ p,zsh-syntax-highlighting
 p,man
 p,fzf
 p,xclip
-p,xdotools
+p,xdotool
 p,xorg-server
 p,xorg-xinit
 p,xorg-xmodmap
@@ -70,7 +70,6 @@ a,ttf-twemoji
 p,btop
 a,qtile-extras
 p,python-dbus-next
-p,obsidian
 p,pacman-contrib
 p,pamixer
 i,pulsectl-asyncio
