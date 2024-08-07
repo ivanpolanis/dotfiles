@@ -9,22 +9,13 @@ font pango:JetBrainsMono Nerd Font 12px
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id setxkbmap -option caps:swapescape
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id slock
-exec --no-startup-id xmodmap .Xmodmap
-
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-                                         
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 #Set Desktop Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.local/wallpapers/wallhaven.jpg
+
+
 bindsym $mod + F6 exec --no-startup-id feh --bg-fill --randomize ~/.local/wallpapers/
 
 
@@ -220,7 +211,7 @@ default_border pixel 1
 
 # Set any keybinding:
 # bindsym $mod+shift+x exec i3lock --color=#111111 --show-failed-attempts --nofork
-bindsym --release $mod+shift+x exec --no-startup-id slock
+bindsym $mod+Shift+X exec --no-startup-id xmodmap ~/.Xmodmap
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+P exec killall picom
 
@@ -228,9 +219,6 @@ bindsym Ctrl+Shift+Escape exec xfce4-taskmanager
 bindsym $mod+Shift+W sticky toggle
 # read 1 character and go to the window with the character
 bindsym $mod+g exec i3-input -F '[con_mark="%s"] focus' -l 1 -P 'Goto: '
-
-# summon greenclip for clipboard history
-bindsym $mod+Shift+G exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 #move workspace to another monitor
 bindsym $mod+greater move workspace to output next
@@ -301,11 +289,10 @@ for_window [window_type="menu"] floating enable
 # for_window [class="Brave-browser" instance="crx_jfdpbekhjmgdkmamcgbaipfbpggchgcm"] floating disable
 
 #autostart commands
-exec --no-startup-id xrdb ~/.Xresources
+# exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id source ~/.zshrc
 
 exec --no-startup-id picom
-exec --no-startup-id greenclip daemon>/dev/null
 exec_always --no-startup-id "sh -c 'sleep 1; exec pkill -RTMIN+10 i3blocks'"
 
 #Autostarting

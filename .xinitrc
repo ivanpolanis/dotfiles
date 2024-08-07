@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
+setxkbmap -option caps:swapescape
 xrandr --auto
-[[ -f ~/.Xmodmap]] && xmodmap ~/.Xmodmap
-exec i3
