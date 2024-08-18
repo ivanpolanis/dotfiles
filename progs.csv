@@ -81,3 +81,7 @@ p,maim
 p,silicon
 p,starship
 p,stow
+p,go
+p,gofumpt
+a,goimports-reviser
+p,stylua

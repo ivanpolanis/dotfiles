@@ -4,14 +4,15 @@ These are my dotfiles for configuring my Arch Linux environment. These dotfiles 
 
 ## Features
 
-- **Window Manager:** [Qtile](http://www.qtile.org/)
+- **Window Manager:** [i3](http://www.i3wm.org/)
 - **Launcher:** [Rofi](https://github.com/davatorium/rofi)
 - **Terminal:** [Alacritty](https://github.com/alacritty/alacritty)
 - **Shell:** [Zsh](https://www.zsh.org/)
 - **Compositor:** [Picom](https://github.com/yshui/picom)
-- **Code Editor:** [Neovim (nvim)](https://neovim.io/)
+- **Code Editor:** [Neovim (nvim)](https://neovim.io/) 
 - **Bootloader:** [Grub](https://www.gnu.org/software/grub/grub.html)
 
+If you're interested here is [my nvim config](https://github.com/ivanpolanis/nvim).
 ## Prerequisites
 
 Before running the installer, make sure you have:
@@ -43,4 +44,8 @@ Feel free to modify these dotfiles to suit your preferences. You can add or remo
 
 ## Screenshot
 
+### [qtile]
 ![Config](.screenshots/qtile.png)
+
+### [i3]
+![Config](.screenshots/i3.png)
