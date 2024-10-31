@@ -65,3 +65,5 @@ export KEYTIMEOUT=1
 prompt off
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+export QSYS_ROOTDIR="/home/ivan/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"
