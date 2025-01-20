@@ -47,7 +47,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # Manual configuration
 
-PATH=/home/ivan/.local/bin:/home/ivan/.cargo/bin:/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+PATH=/home/ivan/.local/bin:/home/ivan/.cargo/bin:/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ivan/.go/bin
 
 #Alias
 [[ -f ~/.config/.aliasrc ]] && source ~/.config/.aliasrc
@@ -67,3 +67,11 @@ eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 export QSYS_ROOTDIR="/home/ivan/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"
+
+if command -v tmux &> /dev/null && [[ -z $TMUX ]]; then
+  # if  && tmux ls | grep "attached" | grep -q "attached" &> /dev/null; then
+  #   tmux new-session
+  # else
+    tmux attach-session -t default || tmux new-session -s default
+  # fi
+fi
