@@ -3,6 +3,12 @@
 set $mod Mod4
 set $term alacritty
 
+
+# # Polybar
+# exec_always --no-startup-id killall polybar
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+#  
+
 #font
 font pango:JetBrainsMono Nerd Font 12px
 
@@ -14,7 +20,6 @@ exec --no-startup-id dex --autostart --environment i3
 
 #Set Desktop Wallpaper
 exec_always --no-startup-id feh --bg-fill ~/.local/wallpapers/wallhaven.jpg
-
 
 bindsym $mod + F6 exec --no-startup-id feh --bg-fill --randomize ~/.local/wallpapers/
 
@@ -36,7 +41,8 @@ bindsym $mod+Return exec --no-startup-id $term
 bindsym $mod+w kill
 
 # rofi:
-bindsym $mod+m exec --no-startup-id rofi -show drun
+bindsym $mod+m exec --no-startup-id $HOME/.config/rofi/scripts/launcher
+bindsym $mod+Shift+q exec --no-startup-id $HOME/.config/rofi/scripts/powermenu
 
 # change focus
 bindsym $mod+h focus left

@@ -68,10 +68,10 @@ eval "$(zoxide init --cmd cd zsh)"
 
 export QSYS_ROOTDIR="/home/ivan/.cache/paru/clone/quartus-free/pkg/quartus-free-quartus/opt/intelFPGA/23.1/quartus/sopc_builder/bin"
 
-if command -v tmux &> /dev/null && [[ -z $TMUX ]]; then
-  # if  && tmux ls | grep "attached" | grep -q "attached" &> /dev/null; then
-  #   tmux new-session
-  # else
-    tmux attach-session -t default || tmux new-session -s default
-  # fi
-fi
+# if command -v tmux &> /dev/null && [[ -z $TMUX ]]; then
+#   # if  && tmux ls | grep "attached" | grep -q "attached" &> /dev/null; then
+#   #   tmux new-session
+#   # else
+#     tmux attach-session -t default || tmux new-session -s default
+#   # fi
+# fi
