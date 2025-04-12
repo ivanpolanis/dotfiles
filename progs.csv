@@ -84,3 +84,5 @@ p,go
 p,gofumpt
 a,goimports-reviser
 p,stylua
+p,deno
+p,webkit2gtk
