@@ -241,7 +241,8 @@ bindsym $mod+b exec --no-startup-id brave
 bindsym $mod+d exec --no-startup-id $term -e ranger
 
 # Screenshots
-bindsym $mod+Shift+S exec --no-startup-id maim --select --hidecursor "/home/$USER/screenshots/$(date "+%d_%b_%r").png" | xclip -selection clipboard -t image/png && notify-send -t 1000 "SS in Clipboard"
+bindsym $mod+Shift+S exec --no-startup-id "maim -s | xclip -selection clipboard -t image/png; xclip -selection clipboard -t image/png -o > /home/$USER/screenshots/$(date '+%F_%R:%S').png && notify-send -t 1000 'SS in Clipboard'"
+
 
 
 # Mode for launching frequently used configs
@@ -289,7 +290,6 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
-# for_window [class="Brave-browser" instance="crx_jfdpbekhjmgdkmamcgbaipfbpggchgcm"] floating disable
 
 #autostart commands
 # exec --no-startup-id xrdb ~/.Xresources

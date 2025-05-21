@@ -14,14 +14,22 @@ fi
 
 SRC="$1"
 
-# Ensure the provided source file exists
-if [ ! -f "$SRC" ]; then
-	echo "❌ Error: Source file '$SRC' does not exist."
-	exit 1
+# Determine compilation sources
+if [ $# -eq 1 ]; then
+	SRC="$1"
+	if [ ! -f "$SRC" ]; then
+		echo "❌ Error: Source file '$SRC' does not exist."
+		exit 1
+	fi
+	SRC_DIR=$(dirname "$SRC")
+	SRC_FILES=$(find "$SRC_DIR" -maxdepth 1 -name '*.c')
+	echo $SRC_FILES
+else
+	SRC_FILES="$@"
+	SRC_DIR=$(dirname "$1")
 fi
 
 # Extract the directory of the source file
-SRC_DIR=$(dirname "$SRC")
 DEBUG_DIR="$SRC_DIR/Debug"
 
 # Configuration
@@ -70,7 +78,7 @@ echo "✅ Arduino detected at: $PORT"
 
 # Compile the code
 echo "🔨 Compiling..."
-avr-gcc -mmcu=$MCU -Wall -Os -o "$ELF" "$SRC"
+avr-gcc -mmcu=$MCU -Wall -Os -o "$ELF" $SRC_FILES
 if [ $? -ne 0 ]; then
 	echo "❌ Compilation failed"
 	exit 1
