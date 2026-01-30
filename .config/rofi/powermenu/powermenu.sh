@@ -14,8 +14,8 @@ dir="$HOME/.config/rofi/powermenu/"
 theme='style-cur'
 
 # CMDs
-uptime="`uptime -p | sed -e 's/up //g'`"
-host=`whoami`
+uptime="$(uptime -p | sed -e 's/up //g')"
+host=$(whoami)
 
 # Options
 shutdown='  Shutdown'
@@ -68,16 +68,16 @@ run_cmd() {
 		elif [[ $1 == '--suspend' ]]; then
 			mpc -q pause
 			amixer set Master mute
-      systemctl restart sddm.service
+			systemctl restart ly.service
 			systemctl suspend
 		elif [[ $1 == '--logout' ]]; then
-			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
+			if [[ "$XDG_SESSION_DESKTOP" == 'openbox' ]]; then
 				openbox --exit
-			elif [[ "$DESKTOP_SESSION" == 'bspwm' ]]; then
+			elif [[ "$XDG_SESSION_DESKTOP" == 'bspwm' ]]; then
 				bspc quit
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
+			elif [[ "$XDG_SESSION_DESKTOP" == 'i3' ]]; then
 				i3-msg exit
-			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
+			elif [[ "$XDG_SESSION_DESKTOP" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 			fi
 		fi
@@ -89,23 +89,23 @@ run_cmd() {
 # Actions
 chosen="$(run_rofi)"
 case ${chosen} in
-    $shutdown)
-		run_cmd --shutdown
-        ;;
-    $reboot)
-		run_cmd --reboot
-        ;;
-    $lock)
-		if [[ -x '/usr/bin/betterlockscreen' ]]; then
-			betterlockscreen -l
-		elif [[ -x '/usr/bin/i3lock' ]]; then
-			i3lock
-		fi
-        ;;
-    $suspend)
-		run_cmd --suspend
-        ;;
-    $logout)
-		run_cmd --logout
-        ;;
+$shutdown)
+	run_cmd --shutdown
+	;;
+$reboot)
+	run_cmd --reboot
+	;;
+$lock)
+	if [[ -x '/usr/bin/betterlockscreen' ]]; then
+		betterlockscreen -l
+	elif [[ -x '/usr/bin/i3lock' ]]; then
+		i3lock
+	fi
+	;;
+$suspend)
+	run_cmd --suspend
+	;;
+$logout)
+	run_cmd --logout
+	;;
 esac
