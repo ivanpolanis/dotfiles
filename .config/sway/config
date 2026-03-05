@@ -12,9 +12,9 @@ set $term alacritty
 #font
 font pango:JetBrainsMono Nerd Font 12px
 
-input type:keyboard {
-  xkb_layout latam
-}
+# input type:keyboard {
+#   xkb_layout latam
+# }
 bindsym $mod+0 input type:keyboard xkb_switch_layout next
 input "type:keyboard" xkb_options caps:swapescape
 
